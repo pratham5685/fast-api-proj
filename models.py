@@ -8,12 +8,15 @@ class PersonalInfo(Model):
     middle_name = fields.CharField(max_length=50, null=True)
     last_name = fields.CharField(max_length=50)
     date_of_birth = fields.DateField()
+    sex = fields.CharField(max_length=1)  # Add sex field with choices
+    age = fields.IntField(null=True)
     address = fields.TextField()
     registration_number = fields.CharField(max_length=20)
     mobile_number = fields.CharField(max_length=15)
     landline_number = fields.CharField(max_length=15, null=True)
     past_registration_info = fields.TextField(null=True)
     fees_status = fields.BooleanField(default=False)
+    
     
     
 class SummerCamp(Model):
